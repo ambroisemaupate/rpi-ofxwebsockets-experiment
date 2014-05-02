@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>27C7E732-4572-4FE8-9265-481AAD2945C9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>rpi-ofxwebsockets-experiment</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>37EF1C9A-DCAD-4F17-8EF9-1250D1560E00</key>
+		<string>https://github.com/labatrockwell/ofxLibwebsockets.git</string>
+		<key>EA52BF19-C135-4751-8B63-AC65F5E8F928</key>
+		<string>ssh://github.com/ambroisemaupate/rpi-ofxwebsockets-experiment.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>rpi-ofxwebsockets-experiment.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>37EF1C9A-DCAD-4F17-8EF9-1250D1560E00</key>
+		<string>../../../../../addons/ofxLibwebsockets</string>
+		<key>EA52BF19-C135-4751-8B63-AC65F5E8F928</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/ambroisemaupate/rpi-ofxwebsockets-experiment.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EA52BF19-C135-4751-8B63-AC65F5E8F928</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>37EF1C9A-DCAD-4F17-8EF9-1250D1560E00</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxLibwebsockets</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA52BF19-C135-4751-8B63-AC65F5E8F928</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rpi-ofxwebsockets-experiment</string>
+		</dict>
+	</array>
+</dict>
+</plist>

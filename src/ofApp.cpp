@@ -3,15 +3,22 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofHideCursor();
+    
+    // Load configuration
+    ofxXmlSettings settings;
+    
+    if(!settings.loadFile("settings.xml")){
+        settings.setValue("config:host", "test.com");
+        settings.setValue("config:port", 8081);
+        settings.saveFile("settings.xml");
+    }
+    
 
-	client.connect("nestor.maupate.com", 8081);
-//    client.connect("echo.websocket.org", true); // optionally use SSL
+	client.connect(settings.getValue("config:host", "test.com"), settings.getValue("config:port", 8081));
+    
 	ofSetLogLevel(OF_LOG_ERROR);
 	
 	client.addListener(this);
-
-
-	this->addPoint("w=100&h=100&x=3&y=4");
 
 	ofSetFrameRate(60);
 }
@@ -28,7 +35,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	ofBackground(200,200,200);
+	ofBackground(0,0,0);
 
 	//int wCount = 15;
 	//int hCount = 15;
@@ -42,40 +49,6 @@ void ofApp::draw(){
 	{
 		points[i]->draw();
 	}
-
-	// ofPushMatrix();
-	// 	ofSetColor(0,0,250);
-	//     ofFill();
-
-
-	//     ofTranslate((1920/2),(1080/2));
-
-	// 	ofRotateZ( ofGetElapsedTimef() * 45.0 );
-
-	//     ofPushMatrix();
-		
-	//     	ofTranslate((1920/-2),(1920/-2));
-		
-	//     	for (int j = 0; j < hCount; ++j)
-	//     	{
-	//     		/* code */
-	// 		    for (int i = 0; i < wCount; ++i)
-	// 		    {
-	// 				ofPushMatrix();
-		
-	// 					ofTranslate((1920/wCount) * i,(1920/hCount) * j);
-		
-	// 					ofPushMatrix();
-	// 						ofRotateZ( ofGetElapsedTimef() * -90.0 );
-	// 						ofRect(rectSize/-2, rectSize/-2,rectSize,rectSize);
-	// 					ofPopMatrix();
-	// 				ofPopMatrix();
-	// 		    }
-	//     	}
-
-
-	//     ofPopMatrix();
-	// ofPopMatrix();
 }
 
 //--------------------------------------------------------------
@@ -160,6 +133,7 @@ void ofApp::addPoint(string msg) {
 	unsigned int height = 0;
 	unsigned int x = 0;
 	unsigned int y = 0;
+	string u = "";
 
 	vector<string> result=ofSplitString(msg, "&");
 
@@ -179,16 +153,23 @@ void ofApp::addPoint(string msg) {
 		if(param[0] == "y"){
 			y = atoi(param[1].c_str());
 		}
+		if(param[0] == "u"){
+			u = param[1];
+		}
 	}
 
-	cout << "New point : " << x << " : " << y << "\n";
+	//cout << "New point : " << x << " : " << y << "\n";
 
 	float newX = ofMap(x, 0, width, 0, WINDOW_WIDTH);
 	float newY = ofMap(y, 0, height, 0, WINDOW_HEIGHT);
 
-	cout << "Mapped point : " << newX << " : " << newY << "\n";
+	//cout << "Mapped point : " << newX << " : " << newY << "\n";
+    
+    if (this->usersColor[u] == NULL) {
+        this->usersColor[u] = new ofColor((ofRandomf()*255),(ofRandomf()*255),(ofRandomf()*255));
+    }
 
-	this->points.push_back(new rzParticuleEmitter( newX, newY, 0.0 ));
+	this->points.push_back(new rzParticuleEmitter( newX, newY, 0.0, u, this ));
 
 	if (this->points.size() > 100)
 	{

@@ -3,9 +3,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 
 
 #include "ofMain.h"
+#include "ofxXmlSettings.h"
 #include "ofxLibwebsockets.h"
 
 #include "entities/rzParticuleEmitter.h"
@@ -19,6 +21,7 @@ class ofApp : public ofBaseApp{
 	public:
 		vector<string> messages;
 		vector<rzParticuleEmitter*> points;
+        map <string, ofColor*> usersColor;
 
 		void setup();
 		void update();

@@ -2,6 +2,7 @@
 .DS_Store
 .AppleDouble
 obj/*
+bin/data/settings.xml
 
 # Compiled Object files
 *.slo

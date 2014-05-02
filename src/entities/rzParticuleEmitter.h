@@ -4,61 +4,32 @@
 #include <vector>
 #include <string>
 
-
 #include "ofMain.h"
 #include "rzParticule.h"
 
-
 using namespace std;
+
+class ofApp;
 
 class rzParticuleEmitter : public ofPoint {
 
 	vector<rzParticule*> particules;
+    int static const PARTICULE_CREATION_COUNT = 5;
+    int static const MAX_PARTICULE_COUNT = 100;
+    
+    ofApp * mainApplication;
+    
+    string username;
+    ofColor color;
 
 public:
 
-	void update() {
+	void update();
+	void draw();
+    bool isDead();
+    void createParticule();
 
-		if (this->particules.size() <  100 )
-		{
-			rzParticule * p = new rzParticule(0,0,0);
-			this->particules.push_back(p);
-		}
-
-
-		for (int i = 0; i < this->particules.size(); ++i)
-		{	
-			rzParticule * p = this->particules[i];
-			if (!p->isDead())
-			{
-				p->update();
-			}
-		}
-	}
-
-	void draw() {
-
-		ofPushMatrix();
-			ofTranslate(this->x,this->y,this->z);
-			for (int i = 0; i < this->particules.size(); ++i)
-			{
-				rzParticule * p = this->particules[i];
-				if (!p->isDead())
-				{
-					p->draw();
-				}
-			}
-		ofPopMatrix();
-	}
-
-	rzParticuleEmitter( float x, float y , float z) : ofPoint(x, y, z){
-
-	}
-	~rzParticuleEmitter() {
-
-		for (int i = 0; i < particules.size(); ++i)
-		{
-			delete particules[i];
-		}
-	}
+	rzParticuleEmitter( float x, float y , float z , ofApp *mainApp );
+    rzParticuleEmitter( float x, float y , float z , string username, ofApp *mainApp );
+	~rzParticuleEmitter();
 };
