@@ -1,0 +1,570 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rem",
+				"removeAttr	.removeAttr()"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"node",
+				"node.http.createServer	Snippet: HTTP Create Server"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"US",
+				"USER_T"
+			],
+			[
+				"gal",
+				"galleries"
+			],
+			[
+				"ca",
+				"cacheHash"
+			],
+			[
+				"cyr",
+				"crypted"
+			],
+			[
+				"“”",
+				"“excerpt”"
+			],
+			[
+				"rz_node",
+				"rz_node_type"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"pa",
+				"parent"
+			],
+			[
+				"getA",
+				"getAdminFolder"
+			],
+			[
+				"tags",
+				"tagsCtrl"
+			],
+			[
+				"strip",
+				"strip_tags"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"proc",
+				"processUser"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"fiel",
+				"fieldOrderings"
+			],
+			[
+				"db",
+				"db_controller"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"has",
+				"hasClass	.hasClass"
+			],
+			[
+				"nedd",
+				"needStructureReload"
+			],
+			[
+				"publish",
+				"published"
+			],
+			[
+				"respo",
+				"responseText"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"canDi",
+				"canDisplayChildren"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"chi",
+				"child"
+			],
+			[
+				"borde",
+				"border-left"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"s",
+				"seconds"
+			],
+			[
+				"new",
+				"newUT"
+			],
+			[
+				"ut",
+				"utransactions"
+			],
+			[
+				"User",
+				"UsersTransactions"
+			],
+			[
+				"tr",
+				"transaction"
+			],
+			[
+				"tran",
+				"transaction"
+			],
+			[
+				"file",
+				"fileJS"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"backend",
+				"backend_application"
+			],
+			[
+				"user",
+				"usersB"
+			],
+			[
+				"if",
+				"if	Twig : If"
+			],
+			[
+				"exerci",
+				"exerciceId"
+			],
+			[
+				"displ",
+				"displayHappyBirthday"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 131.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ejs",
+				"Set Syntax: EJS (<% and %>)"
+			],
+			[
+				"html5",
+				"Snippet: new-html5"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"apa",
+				"Set Syntax: Apache Conf"
+			],
+			[
+				"set sy apa",
+				"Set Syntax: Apache Conf"
+			],
+			[
+				"js",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"jsn",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/27B520A7-D6DF-4F7E-9888-565E25F0ED29/Gruntfile.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/370E01FF-FA92-4854-91F2-F2446A139F94/rz_diaporama.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/C15BDBDE-55C4-4F90-9BD5-0AE8EFCA814C/rz-widgetdocument.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/5196B20D-2411-49B8-9898-83F55A932054/rz-userChooser.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/B9D6C934-20A2-4720-880F-AFADD2B241EE/rz-uploader.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/27C6D0EB-4C06-4978-A9FB-C857F8E05F15/rz-treemanager.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/306944C3-9F83-4A59-9607-47A814F08EA0/rz-tagtree.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/3A400265-157B-4A8A-BB57-00BD24EBA28B/rz-surveyChooser.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/032BD68C-7A8A-4129-AE32-50D0BF53473D/rz-nodetree.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/FCB1F357-33C9-4953-AC36-C80D5DBBBEF1/rz-nodes.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/E3B4C581-DF42-4413-A813-761A24D76EFD/rz-node_autocomplete.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/CA0A55F6-675B-4577-B28B-BB1FAB652C69/rz-nodeChooser.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/B389DCD4-8D9E-4A18-8B14-D5E17A000D25/rz-newsletter.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/C89283BF-EFF3-44E2-BEDD-4EF6574C6748/rz-mapmanager.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/5091E876-55F6-46AB-8AA0-61AC58796164/rz-map.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/54369199-5A8B-4010-9CB0-ACD720345860/rz-functions.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/7729E77E-6480-41BF-984B-DC7EFF495C76/rz-form.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/DCC5D1FB-236B-4A7B-9D66-03C2B8D91E5E/rz-embedder.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/2EF3E6CF-C386-4BA0-9071-A71820C8647F/rz-documents.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/25136883-1634-44AF-A071-DFD439847CFC/rz-map.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/CA134BDC-F8D6-47FA-BF1E-FAC9282DBD49/rz-lazypage.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/E69DB396-9008-4149-BF0D-E1DB32047B9B/rz-functions.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/FC38020D-E4D3-40B1-AA9E-6FFCBF4ABABD/rz-form.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/B7F595AD-990A-4935-9418-66946F2EBA2B/rz-cms.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/6BA74A39-381A-4E58-8FB2-853841A2B9AD/rz-embedder.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/35C60DE3-6635-4A60-B8E3-88D3C4F69ADE/rz-documents.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/FD609147-89CC-44F5-86E7-4E43A42D6597/rz-childrenChooser.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/3ECECDD6-EC6C-4B76-A091-F25A088116E6/Gruntfile.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/3565511C-CA16-49E5-8E0F-FC9D46399239/style.css",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/872E4F59-2C31-466A-AC66-D4D65CC1D88B/style.css",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/9230815A-0B48-4779-AE10-65EA854637DE/package.json",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/3F6D63F0-7E42-4896-822B-C57BFC72D58E/rz_core.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/5A33C39B-3D16-4C48-AF38-0FA6DCC4D81E/admin.scripts.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/B8F21463-7380-4993-A239-4A741846E144/admin.scripts.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/EC1B5E6B-C79E-46BB-8BF3-38C5821A140B/rz-documents.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/30B8E0FB-CBEC-4526-8661-A5A7574FFABF/compile.sh",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/7C3BC546-C9EE-40A0-B4F4-FBC4CC5DA678/rz-admin-template.min.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/9B655052-6A2F-4F25-9B86-7BABB597C9E7/rz-admin-template.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/436C2540-083E-4678-A8D8-30B0B27948AF/style.css",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/A4C0709E-AA37-4A45-9948-A9563911DD6C/package.json",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/091B0165-B26F-4C9C-BD14-BCE22689C5D7/package.json",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/A9B2C05C-5260-4295-BC01-6C2EB6A69D37/package.json",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/5DF79C96-0289-4A95-A95D-FDCDB550E152/package.json",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/views/footer.ejs",
+		"/Volumes/pi/openFrameworks/apps/myApps/myRpiApp/src/ofApp.h",
+		"/Volumes/pi/openFrameworks/apps/myApps/myRpiApp/src/ofApp.cpp",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/app.js",
+		"/Volumes/pi/openFrameworks/examples/addons/example_client_hello_world/src/testApp.cpp",
+		"/Volumes/pi/openFrameworks/examples/addons/example_client_hello_world/src/main.cpp",
+		"/Volumes/pi/openFrameworks/examples/addons/example_client_hello_world/src/testApp.h",
+		"/Volumes/pi/openFrameworks/apps/myApps/myRpiApp/src/main.cpp",
+		"/Volumes/Home Directory/openFrameworks/apps/myApps/myRpiApp/src/ofApp.h",
+		"/Volumes/Home Directory/openFrameworks/apps/myApps/myRpiApp/src/ofApp.cpp",
+		"/Volumes/Home Directory/openFrameworks/addons/ofxSocketIOClient/example/src/testApp.cpp",
+		"/Volumes/Home Directory/openFrameworks/addons/ofxSocketIOClient/example/src/testApp.h",
+		"/Volumes/Home Directory/openFrameworks/addons/ofxSocketIOClient/example/src/ExampleClient.h",
+		"/Volumes/Home Directory/openFrameworks/addons/ofxLibwebsockets/addon_config.mk",
+		"/Volumes/Home Directory/openFrameworks/addons/ofxSocketIOClient/example/src/SocketIOEvents.h",
+		"/Volumes/Home Directory/openFrameworks/apps/myApps/myRpiApp/src/ofxSocketIOClient.h",
+		"/Volumes/Home Directory/openFrameworks/addons/ofxLibwebsockets/install.xml",
+		"/Volumes/Home Directory/openFrameworks/apps/myApps/myRpiApp/addons.make",
+		"/Users/ambroisemaupate/Downloads/ofxLibwebsockets/example-client-hello world/src/testApp.h",
+		"/Users/ambroisemaupate/Dropbox/BACKUP/SublimeUser/PHP_separatorComment.sublime-snippet",
+		"/Users/ambroisemaupate/Downloads/ofxLibwebsockets/example-client-hello world/src/testApp.cpp",
+		"/Volumes/Home Directory/openFrameworks/examples/addons/example_client_hello_world/addons.make",
+		"/Volumes/Home Directory/openFrameworks/examples/addons/example_client_hello_world/src/testApp.cpp",
+		"/Volumes/Home Directory/openFrameworks/apps/myApps/myRpiApp/src/main.cpp",
+		"/Users/ambroisemaupate/.bash_profile",
+		"/etc/hosts",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/views/index.ejs",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/public/css/style.less",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/views/header.ejs",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/package.json",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/node_modules/favicon/node_modules/request/node_modules/form-data/node_modules/combined-stream/test/integration/test-delayed-streams-and-buffers-and-strings.js",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/node_modules/less/test/less/errors/import-no-semi.txt",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/node_modules/less/test/less/errors/import-no-semi.less",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/views/contact.ejs",
+		"/Volumes/ambroisemaupate/nodejs_projects/essai01/public/style.css",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/47134D53-A070-4FD2-989E-376B1CA53C4D/default_mainNavigation.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/C84AF458-ECCD-4ADA-B1CA-7A338989949E/index.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/DB2F0C27-F7A3-4ED9-8374-CB99D10BCE10/index.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/677FF04B-2754-4D08-8421-03CBDB589720/index.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/B4AB9771-D83E-49DD-99B5-A248F67C3352/index.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/19D00676-C4B3-4274-AFD8-2B5CC742175D/error.log",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/3109E417-062C-4183-A1F5-55AC898CB47A/index.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/75F66A0C-C0AB-45C1-94D5-C67A1E2D64DD/header.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/3BCD1C06-DD1D-4D8C-9159-A543CDAE747E/access.log",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/5F6DC92D-6E71-4F9E-8D8E-7602115005A9/dead.letter",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/A0456D9D-067F-44EF-B7DE-1152EF31B32B/robots.txt",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/FE19D925-77BB-4386-A06B-8430E6D33D1A/config.php.example",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/8BC80FC0-83BC-4011-929D-06094E845F9C/access.log.1",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/60DE2F7B-336D-4720-8C1C-3A1ACF1C8833/user.log",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/C5C9DF70-1818-4B29-910A-15A397F92DDF/access.log",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/9DC614F9-46F2-4E3F-A18F-DC3D62EE6451/mainlog",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/CDC871C8-9BB8-4F51-B08C-15E6B9507C83/mail.warn",
+		"/Users/ambroisemaupate/Desktop/mysql.log.1",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/169BA16B-0496-4B84-B5DE-F14230EC9B5B/mysql.err",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/753FC798-F286-4B6D-B4F5-5D5AFAC14D03/mysql.log",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/328032B1-8E75-454B-9512-BBB62C061788/rkhunter.log",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/B27D828B-F6CD-475A-BEF0-795C4438A058/fail2ban.log",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/1D1C73D5-3839-4CA5-9B2B-ED82F5D4D785/syslog",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/A8036F5D-BCBA-4DF0-9E24-3F067694AE1A/.ovhconfig",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/AF5AC186-0D25-4EB1-9738-8CC4FDC9E16E/style_header.less",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/4DA9D91D-4283-4EC6-97D4-C50C0DFDC753/private.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/465FD570-DEE2-48D7-BE0E-340119A4AA27/style_main.less",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/D2814A08-FF7E-4F91-A63D-992EDB27C36B/main_navigation.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/69DB58AC-5717-446D-9884-FA9BD1C37EF3/content_home.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/FBD45608-BD7D-4179-8B3D-CDD9B3819145/main_navigation.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/63B8B789-50C7-4CFD-8FCB-41738026A911/documents_in_nodes_joint.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/ABCD482A-817C-488C-89D0-1C4307A7F80B/rz_node_type_field.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/24DE62B8-D556-4ACE-8B00-CA8FCD49E0BE/photo_gallery.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/1D9FDEB8-2B60-42A6-906B-35E2BBA72DAF/rz_db_object.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/C2029209-ABE1-4EFA-B17B-0CC6164FFB8A/content_home.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/C71649E4-9712-4276-A5D0-9E9E3AC1B05A/index.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/720A52CA-D758-4E83-B05B-CEA5B15E4DE8/photo_gallery.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/DB89A5AB-EC05-4FEC-8A72-4907A115C659/photo_gallery.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/90994945-84A6-42E8-802F-3FF549F7AD01/content_home.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/06F5C8EA-61A7-44F8-96C3-4516153B7EA3/content_visites-virtuelles.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/D230CCDE-A2BC-497E-8E0A-00983CE83EB1/content_home.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/C864BE7C-5286-40E0-98EB-9ADE0986AF98/rz_filter.class.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/A82345E5-9185-4958-BD9D-1177A6A05629/footer.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/65FEC04F-A1C8-4E56-AF57-7663723CF217/compile.sh",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/1388D638-1B7F-4D66-BFB7-0843B473826D/photo_panorama.class.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/DF66482F-D2C4-43FF-9C96-9BBF6A80D184/compile.sh",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/A66B3722-59E2-4968-AF21-926DC93E4302/compile.sh",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/7BBBC7D0-EF50-4A45-8E95-582FC84F3EA6/footer.php",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/99571A5F-666C-48C1-8A7C-E14C45E125EC/scripts.js",
+		"/Users/ambroisemaupate/Library/Caches/Cleanup At Startup/Transmit/5FAA031C-150E-40E4-A460-ADB28D1E8745/main_diaporama.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"updateStatus(\"wsStatus\", ",
+			"testApp",
+			"bind_event",
+			"thumbnail",
+			"NULL th",
+			"postCMSUpdate",
+			"rz_hook",
+			"browser_compatibility",
+			"browser",
+			"\\[\\s+(\\\"[a-z0-9A-Z_\\-]+?\\\"),\\s+(\\\"[^\"]*\\\"|[0-9]*),\\s+(\\\"[a-zA-Z_\\-]+?\\\"),\\s+(\\\"[a-zA-Z_\\-]+?\\\")\\s+\\]",
+			"\\[\\s+(\\\"[a-zA-Z_\\-]+?\\\"),\\s+(\\\"[a-zA-Z_\\-]+?\\\"|[0-9]*),\\s+(\\\"[a-zA-Z_\\-]+?\\\"),\\s+(\\\"[a-zA-Z_\\-]+?\\\")\\s+\\]",
+			"\\[\\s+\\\"[a-zA-Z_|-]+?\\\",\\s+(\\\"[a-zA-Z_|-]+?\\\"|[0-9]*),\\s+\\\"[a-zA-Z_|-]+?\\\",\\s+\\\"[a-zA-Z_|-]+?\\\",\\]",
+			"_orderings()",
+			"get_tag_orderings()",
+			"get_node_orderings()",
+			"$node_orderings",
+			"$users_ranks",
+			"$user_ranks",
+			"get_defined_ranks",
+			"get_defined_ranks|user_ranks",
+			"get_defined_ranks|$user_ranks",
+			"get_defined_ranks|\\$user_ranks",
+			"get_defined_ranks|$user_ranks",
+			"get_defined_ranks|user_ranks",
+			"get_defined_ranks",
+			"users_ranks",
+			"get_base_folder",
+			"canDiplayChildren",
+			"pingu",
+			"movie",
+			"$rzjs",
+			"$adminjs",
+			"Default"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"console.log(",
+			"ofApp",
+			"{ \"key\":$1, \"value\":$2, \"group\":$3, \"type\":$4, \"description\":\"\" }",
+			"rz_tag::$fieldOrderings",
+			"rz_node::$fieldOrderings",
+			"rz_user::$availableUserRanks",
+			"rz_core::getBaseFolder",
+			"backend_application::$rzjs",
+			"backend_application::$adminjs",
+			"Exercice"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "myRpiApp.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

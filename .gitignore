@@ -1,3 +1,8 @@
+._myRpiApp*
+.DS_Store
+.AppleDouble
+obj/*
+
 # Compiled Object files
 *.slo
 *.lo
