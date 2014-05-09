@@ -17,7 +17,10 @@
 
 using namespace std;
 
-class ofApp : public ofBaseApp{
+class ofApp : public ofBaseApp {
+    
+        ofxXmlSettings settings;
+    
 	public:
 		vector<string> messages;
 		vector<rzParticuleEmitter*> points;
@@ -38,7 +41,8 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 
-		void addPoint(string msg);
+        void addPoint(string msg);
+        void getConfiguration();
 
 		
         ofxLibwebsockets::Client client;

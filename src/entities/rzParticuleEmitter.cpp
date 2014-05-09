@@ -9,6 +9,9 @@
 #include "../ofApp.h"
 #include "rzParticuleEmitter.h"
 
+int rzParticuleEmitter::PARTICULE_CREATION_COUNT = 5;
+int rzParticuleEmitter::MAX_PARTICULE_COUNT = 50;
+
 void rzParticuleEmitter::update() {
     
     if (this->particules.size() <  MAX_PARTICULE_COUNT )
@@ -79,11 +82,4 @@ rzParticuleEmitter::rzParticuleEmitter( float x, float y , float z , string user
 }
 rzParticuleEmitter::~rzParticuleEmitter() {
     
-    //		for (int i = 0; i < particules.size(); ++i)
-    //		{
-    //            rzParticule * p = this->particules[i];
-    //            if  (p != NULL) {
-    //                delete p;
-    //            }
-    //		}
 }

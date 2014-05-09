@@ -14,8 +14,6 @@ class ofApp;
 class rzParticuleEmitter : public ofPoint {
 
 	vector<rzParticule*> particules;
-    int static const PARTICULE_CREATION_COUNT = 5;
-    int static const MAX_PARTICULE_COUNT = 100;
     
     ofApp * mainApplication;
     
@@ -23,6 +21,9 @@ class rzParticuleEmitter : public ofPoint {
     ofColor color;
 
 public:
+    
+    static int PARTICULE_CREATION_COUNT;
+    static int MAX_PARTICULE_COUNT;
 
 	void update();
 	void draw();

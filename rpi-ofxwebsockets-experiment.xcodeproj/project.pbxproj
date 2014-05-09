@@ -10,6 +10,7 @@
 		6D73A566CFEC0B462FE6E43C /* Reactor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2232A9453E355593EF36ADA7 /* Reactor.cpp */; };
 		86135253DC7909CA8590E157 /* Protocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57EEFEC8B85F7C3B15DD45A4 /* Protocol.cpp */; };
 		9EF1133BC23669A5C94FE30F /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69668FDE141262BC3C6CA929 /* jsoncpp.cpp */; };
+		A58D1F6619192C4500E8F954 /* rzParticule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58D1F6519192C4500E8F954 /* rzParticule.cpp */; };
 		A5E774211913CD3A004C6BD2 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E7741A1913CD3A004C6BD2 /* tinyxml.cpp */; };
 		A5E774221913CD3A004C6BD2 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E7741C1913CD3A004C6BD2 /* tinyxmlerror.cpp */; };
 		A5E774231913CD3A004C6BD2 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E7741D1913CD3A004C6BD2 /* tinyxmlparser.cpp */; };
@@ -78,6 +79,7 @@
 		5D95092D59E7A34C9DB7823E /* Server.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Server.cpp; path = ../../../addons/ofxLibwebsockets/libs/ofxLibwebsockets/src/Server.cpp; sourceTree = SOURCE_ROOT; };
 		69668FDE141262BC3C6CA929 /* jsoncpp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = jsoncpp.cpp; path = ../../../addons/ofxLibwebsockets/libs/jsoncpp/jsoncpp.cpp; sourceTree = SOURCE_ROOT; };
 		8A7A54FC0AEF8A0E41CFF07C /* Connection.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Connection.h; path = ../../../addons/ofxLibwebsockets/libs/ofxLibwebsockets/include/ofxLibwebsockets/Connection.h; sourceTree = SOURCE_ROOT; };
+		A58D1F6519192C4500E8F954 /* rzParticule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rzParticule.cpp; sourceTree = "<group>"; };
 		A5E774141913CB57004C6BD2 /* rzParticule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rzParticule.h; sourceTree = "<group>"; };
 		A5E774151913CB57004C6BD2 /* rzParticuleEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rzParticuleEmitter.h; sourceTree = "<group>"; };
 		A5E7741A1913CD3A004C6BD2 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A5E774141913CB57004C6BD2 /* rzParticule.h */,
+				A58D1F6519192C4500E8F954 /* rzParticule.cpp */,
 				A5E774151913CB57004C6BD2 /* rzParticuleEmitter.h */,
 				A5E774251913E7F0004C6BD2 /* rzParticuleEmitter.cpp */,
 			);
@@ -441,6 +444,7 @@
 				A78C77753D562AE8F0E928ED /* Connection.cpp in Sources */,
 				C6C3882A0B0872D1485F3874 /* Client.cpp in Sources */,
 				A5E774221913CD3A004C6BD2 /* tinyxmlerror.cpp in Sources */,
+				A58D1F6619192C4500E8F954 /* rzParticule.cpp in Sources */,
 				A5E774241913CD3A004C6BD2 /* ofxXmlSettings.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

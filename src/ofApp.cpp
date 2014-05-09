@@ -1,20 +1,13 @@
 #include "ofApp.h"
+#include "entities/rzParticule.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofHideCursor();
     
-    // Load configuration
-    ofxXmlSettings settings;
-    
-    if(!settings.loadFile("settings.xml")){
-        settings.setValue("config:host", "test.com");
-        settings.setValue("config:port", 8081);
-        settings.saveFile("settings.xml");
-    }
-    
+    this->getConfiguration();
 
-	client.connect(settings.getValue("config:host", "test.com"), settings.getValue("config:port", 8081));
+	client.connect(this->settings.getValue("config:host", "test.com"), this->settings.getValue("config:port", 8081));
     
 	ofSetLogLevel(OF_LOG_ERROR);
 	
@@ -166,7 +159,7 @@ void ofApp::addPoint(string msg) {
 	//cout << "Mapped point : " << newX << " : " << newY << "\n";
     
     if (this->usersColor[u] == NULL) {
-        this->usersColor[u] = new ofColor((ofRandomf()*255),(ofRandomf()*255),(ofRandomf()*255));
+        this->usersColor[u] = new ofColor((ofRandomf()*150)+100,(ofRandomf()*150)+100,(ofRandomf()*150)+100);
     }
 
 	this->points.push_back(new rzParticuleEmitter( newX, newY, 0.0, u, this ));
@@ -176,4 +169,38 @@ void ofApp::addPoint(string msg) {
 		delete this->points[0];
 		this->points.erase(this->points.begin());
 	}
+}
+
+void ofApp::getConfiguration() {
+    
+    // Load configuration
+    if(!this->settings.loadFile("settings.xml")){
+        // Connection
+        this->settings.setValue("config:host", "test.com");
+        this->settings.setValue("config:port", 8081);
+        
+        // Vars
+        this->settings.setValue("particules:initialForce", 2.0f);
+        this->settings.setValue("particules:initialLife", 5.0f);
+        this->settings.setValue("particules:maxSize", 20.0f);
+        this->settings.setValue("particules:minSize", 3.0f);
+        this->settings.setValue("particules:maxDeviation", 1.0f);
+        
+        // Emitter
+        this->settings.setValue("emitter:creationParticulesCount", 5);
+        this->settings.setValue("emitter:maxParticulesCount", 50);
+        
+        this->settings.saveFile("settings.xml");
+    }
+    
+    
+    rzParticule::INITIAL_FORCE = this->settings.getValue("particules:initialForce", 2.0f);
+    rzParticule::INITIAL_LIFE = this->settings.getValue("particules:initialLife", 5.0f);
+    rzParticule::MAX_SIZE = this->settings.getValue("particules:maxSize", 20.0f);
+    rzParticule::MIN_SIZE = this->settings.getValue("particules:minSize", 20.0f);
+    rzParticule::MAX_DEVIATION = this->settings.getValue("particules:maxDeviation", 1.0f);
+    
+    
+    rzParticuleEmitter::PARTICULE_CREATION_COUNT = this->settings.getValue("emitter:creationParticulesCount", 5);
+    rzParticuleEmitter::MAX_PARTICULE_COUNT = this->settings.getValue("emitter:maxParticulesCount", 50);
 }

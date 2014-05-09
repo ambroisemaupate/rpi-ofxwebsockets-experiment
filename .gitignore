@@ -3,6 +3,7 @@
 .AppleDouble
 obj/*
 bin/data/settings.xml
+project.xcworkspace
 
 # Compiled Object files
 *.slo
