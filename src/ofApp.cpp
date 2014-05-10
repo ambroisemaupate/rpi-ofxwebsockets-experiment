@@ -4,14 +4,14 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofHideCursor();
-    
-    this->getConfiguration();
+	
+	this->getConfiguration();
 
-	client.connect(this->settings.getValue("config:host", "test.com"), this->settings.getValue("config:port", 8081));
-    
+	this->client.connect(this->settings.getValue("config:host", "nestor.maupate.com"), this->settings.getValue("config:port", 8081));
+	
 	ofSetLogLevel(OF_LOG_ERROR);
 	
-	client.addListener(this);
+	this->client.addListener(this);
 
 	ofSetFrameRate(60);
 }
@@ -19,29 +19,35 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	for (unsigned int i = 0; i < points.size(); i++)
-	{
-		points[i]->update();
-	}
+	vector<rzParticuleEmitter*>::iterator iter;
+
+	for (iter = this->points.begin(); iter != this->points.end(); iter++) {
+
+		if (!(*iter)->isDead())
+		{
+			(*iter)->update();
+		}
+		/*else {
+			iter = this->points.erase(iter);
+		}*/
+	} 
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
 	ofBackground(0,0,0);
-
-	//int wCount = 15;
-	//int hCount = 15;
-
-	//int rectSize  = 10;
-
 	ofSetColor(0,0,0);
 	ofFill();
 
-	for (unsigned int i = 0; i < points.size(); i++)
-	{
-		points[i]->draw();
-	}
+	vector<rzParticuleEmitter*>::iterator iter;
+	for (iter = this->points.begin(); iter != this->points.end(); iter++) {
+
+		if (!(*iter)->isDead())
+		{
+			(*iter)->draw();
+		}
+	} 
 }
 
 //--------------------------------------------------------------
@@ -93,11 +99,15 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 //--------------------------------------------------------------
 void ofApp::onConnect( ofxLibwebsockets::Event& args ){
 	cout<<"on connected"<<endl;
+
+	this->client.send("Visual receiver has been connected…");
 }
 
 //--------------------------------------------------------------
 void ofApp::onOpen( ofxLibwebsockets::Event& args ){
 	cout<<"on open"<<endl;
+
+	this->client.send("Visual receiver has been connected…");
 }
 
 //--------------------------------------------------------------
@@ -157,10 +167,10 @@ void ofApp::addPoint(string msg) {
 	float newY = ofMap(y, 0, height, 0, WINDOW_HEIGHT);
 
 	//cout << "Mapped point : " << newX << " : " << newY << "\n";
-    
-    if (this->usersColor[u] == NULL) {
-        this->usersColor[u] = new ofColor((ofRandomf()*150)+100,(ofRandomf()*150)+100,(ofRandomf()*150)+100);
-    }
+	
+	if (this->usersColor[u] == NULL) {
+		this->usersColor[u] = new ofColor((ofRandomf()*150)+100,(ofRandomf()*150)+100,(ofRandomf()*150)+100);
+	}
 
 	this->points.push_back(new rzParticuleEmitter( newX, newY, 0.0, u, this ));
 
@@ -172,35 +182,42 @@ void ofApp::addPoint(string msg) {
 }
 
 void ofApp::getConfiguration() {
-    
-    // Load configuration
-    if(!this->settings.loadFile("settings.xml")){
-        // Connection
-        this->settings.setValue("config:host", "test.com");
-        this->settings.setValue("config:port", 8081);
-        
-        // Vars
-        this->settings.setValue("particules:initialForce", 2.0f);
-        this->settings.setValue("particules:initialLife", 5.0f);
-        this->settings.setValue("particules:maxSize", 20.0f);
-        this->settings.setValue("particules:minSize", 3.0f);
-        this->settings.setValue("particules:maxDeviation", 1.0f);
-        
-        // Emitter
-        this->settings.setValue("emitter:creationParticulesCount", 5);
-        this->settings.setValue("emitter:maxParticulesCount", 50);
-        
-        this->settings.saveFile("settings.xml");
-    }
-    
-    
-    rzParticule::INITIAL_FORCE = this->settings.getValue("particules:initialForce", 2.0f);
-    rzParticule::INITIAL_LIFE = this->settings.getValue("particules:initialLife", 5.0f);
-    rzParticule::MAX_SIZE = this->settings.getValue("particules:maxSize", 20.0f);
-    rzParticule::MIN_SIZE = this->settings.getValue("particules:minSize", 20.0f);
-    rzParticule::MAX_DEVIATION = this->settings.getValue("particules:maxDeviation", 1.0f);
-    
-    
-    rzParticuleEmitter::PARTICULE_CREATION_COUNT = this->settings.getValue("emitter:creationParticulesCount", 5);
-    rzParticuleEmitter::MAX_PARTICULE_COUNT = this->settings.getValue("emitter:maxParticulesCount", 50);
+	
+	// Load configuration
+	if(!this->settings.loadFile("settings.xml")){
+		// Connection
+		this->settings.setValue("config:host", "test.com");
+		this->settings.setValue("config:port", 8081);
+		
+		// Vars
+		this->settings.setValue("particules:initialForce", 2.0f);
+		this->settings.setValue("particules:initialLife", 5.0f);
+		this->settings.setValue("particules:maxSize", 20.0f);
+		this->settings.setValue("particules:minSize", 3.0f);
+		this->settings.setValue("particules:maxDeviation", 1.0f);
+		
+		// Emitter
+		this->settings.setValue("emitter:creationParticulesCount", 5);
+		this->settings.setValue("emitter:maxParticulesCount", 50);
+		
+		this->settings.saveFile("settings.xml");
+
+		cout << "Saved setting file.";
+	}
+	
+	
+	rzParticule::INITIAL_FORCE = this->settings.getValue("particules:initialForce", 2.0f);
+	rzParticule::INITIAL_LIFE = this->settings.getValue("particules:initialLife", 5000.0f);
+	rzParticule::MAX_SIZE = this->settings.getValue("particules:maxSize", 20.0f);
+	rzParticule::MIN_SIZE = this->settings.getValue("particules:minSize", 20.0f);
+	rzParticule::MAX_DEVIATION = this->settings.getValue("particules:maxDeviation", 1.0f);
+	
+	
+	rzParticuleEmitter::PARTICULE_CREATION_COUNT = this->settings.getValue("emitter:creationParticulesCount", 5);
+	rzParticuleEmitter::MAX_PARTICULE_COUNT = this->settings.getValue("emitter:maxParticulesCount", 50);
+}
+
+void ofApp::exit(ofEventArgs &args) {
+
+	this->client.close();
 }

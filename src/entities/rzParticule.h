@@ -17,6 +17,9 @@ class rzParticule : public ofPoint {
 	float life;
     float size;
     int type;
+
+    int age;
+    int birthtime;
     
     static const int CIRCLE = 0;
     static const int RECT = 1;
