@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/entities/rzParticuleEmitter.h"
-            timestampString = "421080935.760039"
+            timestampString = "421464669.472642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "class rzParticuleEmitter"
             landmarkType = "3">
          </BreakpointContent>

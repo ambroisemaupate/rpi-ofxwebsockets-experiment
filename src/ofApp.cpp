@@ -7,7 +7,7 @@ void ofApp::setup(){
 	
 	this->getConfiguration();
 
-	this->client.connect(this->settings.getValue("config:host", "nestor.maupate.com"), this->settings.getValue("config:port", 8081));
+	this->client.connect(this->settings.getValue("config:host", "test.com"), this->settings.getValue("config:port", 8081));
 	
 	ofSetLogLevel(OF_LOG_ERROR);
 	
@@ -19,18 +19,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	vector<rzParticuleEmitter*>::iterator iter;
 
-	for (iter = this->points.begin(); iter != this->points.end(); iter++) {
-
-		if (!(*iter)->isDead())
-		{
-			(*iter)->update();
-		}
-		/*else {
-			iter = this->points.erase(iter);
-		}*/
-	} 
 }
 
 //--------------------------------------------------------------
@@ -40,14 +29,13 @@ void ofApp::draw(){
 	ofSetColor(0,0,0);
 	ofFill();
 
-	vector<rzParticuleEmitter*>::iterator iter;
-	for (iter = this->points.begin(); iter != this->points.end(); iter++) {
-
-		if (!(*iter)->isDead())
-		{
-			(*iter)->draw();
-		}
-	} 
+    if (this->points.size() > 0) {
+        for (auto iter = this->points.begin(); iter != this->points.end(); ++iter) {
+            (*iter).update();
+            (*iter).draw();
+        }
+    }
+    ofRemove(this->points,ofApp::shouldRemove);
 }
 
 //--------------------------------------------------------------
@@ -100,14 +88,14 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 void ofApp::onConnect( ofxLibwebsockets::Event& args ){
 	cout<<"on connected"<<endl;
 
-	this->client.send("Visual receiver has been connected…");
+	this->client.send("Visual receiver has been connected");
 }
 
 //--------------------------------------------------------------
 void ofApp::onOpen( ofxLibwebsockets::Event& args ){
 	cout<<"on open"<<endl;
 
-	this->client.send("Visual receiver has been connected…");
+	this->client.send("Visual receiver has been connected");
 }
 
 //--------------------------------------------------------------
@@ -136,6 +124,7 @@ void ofApp::addPoint(string msg) {
 	unsigned int height = 0;
 	unsigned int x = 0;
 	unsigned int y = 0;
+	unsigned int s = 0;
 	string u = "";
 
 	vector<string> result=ofSplitString(msg, "&");
@@ -159,26 +148,33 @@ void ofApp::addPoint(string msg) {
 		if(param[0] == "u"){
 			u = param[1];
 		}
+		if(param[0] == "s"){
+			s = atoi(param[1].c_str());
+		}
 	}
 
 	//cout << "New point : " << x << " : " << y << "\n";
-
-	float newX = ofMap(x, 0, width, 0, WINDOW_WIDTH);
-	float newY = ofMap(y, 0, height, 0, WINDOW_HEIGHT);
-
-	//cout << "Mapped point : " << newX << " : " << newY << "\n";
+    if (width > 0 && height > 0 && x > 0 && y > 0 && s == 1) {
+        
+        //this->lockPoints = true;
+        ofSeedRandom();
+        
+        float newX = ofMap(x, 0, width, 0, WINDOW_WIDTH);
+        float newY = ofMap(y, 0, height, 0, WINDOW_HEIGHT);
+        
+        //cout << "Mapped point : " << newX << " : " << newY << "\n";
+        
+        if (this->usersColor[u] == NULL) {
+            this->usersColor[u] = new ofColor((ofRandomf()*150)+100,(ofRandomf()*150)+100,(ofRandomf()*150)+100);
+        }
+        
+        rzParticuleEmitter emitter = rzParticuleEmitter( newX, newY, 0.0, u, this );
+        
+        this->points.push_back(emitter);
+        
+        //this->lockPoints = false;
+    }
 	
-	if (this->usersColor[u] == NULL) {
-		this->usersColor[u] = new ofColor((ofRandomf()*150)+100,(ofRandomf()*150)+100,(ofRandomf()*150)+100);
-	}
-
-	this->points.push_back(new rzParticuleEmitter( newX, newY, 0.0, u, this ));
-
-	if (this->points.size() > 100)
-	{
-		delete this->points[0];
-		this->points.erase(this->points.begin());
-	}
 }
 
 void ofApp::getConfiguration() {
@@ -220,4 +216,9 @@ void ofApp::getConfiguration() {
 void ofApp::exit(ofEventArgs &args) {
 
 	this->client.close();
+}
+
+bool ofApp::shouldRemove(rzParticuleEmitter &e){
+    if( e.isDead() )return true;
+    else return false;
 }

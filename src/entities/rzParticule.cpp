@@ -20,14 +20,14 @@ void rzParticule::update(){
 
     //if (this->age % 15 < 3)
     //{
-        int proba = (int)(ofRandomf()*10.0f);
+        int proba = (int)(ofRandomuf()*10.0f);
         if (proba % 5 == 0){
             this->alterMotion();
         }
 
-        this->x += this->motion->x;
-        this->y += this->motion->y;
-        this->z += this->motion->z;
+        this->x += this->motion.x;
+        this->y += this->motion.y;
+        this->z += this->motion.z;
     //}
 }
 
@@ -38,9 +38,9 @@ void rzParticule::alterMotion() {
     float yDeviation = (ofRandomf()*rzParticule::MAX_DEVIATION);
     float zDeviation = (ofRandomf()*rzParticule::MAX_DEVIATION);
     
-    this->motion->x += ((xDeviation)-(xDeviation/2));
-    this->motion->y += ((yDeviation)-(yDeviation/2));
-    this->motion->z += ((yDeviation)-(yDeviation/2));
+    this->motion.x += ((xDeviation));
+    this->motion.y += ((yDeviation));
+    this->motion.z += ((yDeviation));
 }
 
 void rzParticule::draw() {
@@ -88,17 +88,22 @@ rzParticule::rzParticule( float x, float y , float z) : ofPoint(x, y, z){
     float motionY = ofRandomf()*rzParticule::INITIAL_FORCE;
     float motionZ = ofRandomf()*rzParticule::INITIAL_FORCE;
     
-    this->motion = new ofPoint( (motionX)-(motionX/2), (motionY)-(motionY/2), (motionZ)-(motionZ/2) );
-    this->life = (int)(ofRandomf()*rzParticule::INITIAL_LIFE);
-    this->size = (int)(ofRandomf()*rzParticule::MAX_SIZE) + rzParticule::MIN_SIZE;
+    this->motion = ofPoint( (motionX), (motionY), (motionZ) );
+    this->life = (int)(ofRandomuf()*rzParticule::INITIAL_LIFE);
+    this->size = (int)(ofRandomuf()*rzParticule::MAX_SIZE) + rzParticule::MIN_SIZE;
     
     
-    this->type = (int)(ofRandomf()*4);
+    this->type = (int)(ofRandomuf()*4);
     this->birthtime = ofGetElapsedTimeMillis();
 }
 
+rzParticule::~rzParticule(){
+    //if(this->motion != NULL) delete this->motion;
+    //if(this->color != NULL) delete this->color;
+}
+
 ofPoint * rzParticule::getMotion(){
-    return this->motion;
+    return &this->motion;
 }
 
 void rzParticule::setColor( ofColor * color ){
@@ -106,5 +111,5 @@ void rzParticule::setColor( ofColor * color ){
 }
 
 bool rzParticule::isDead(){
-    return (this->age >= this->life);
+    return ((this->age > this->life) && this->age > 0);
 }

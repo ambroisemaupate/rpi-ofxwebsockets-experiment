@@ -12,13 +12,13 @@ using namespace std;
 
 class rzParticule : public ofPoint {
 
-	ofPoint* motion;
-    ofColor* color;
+	ofPoint motion;
+    ofColor * color;
 	float life;
     float size;
     int type;
 
-    int age;
+    int age = 0;
     int birthtime;
     
     static const int CIRCLE = 0;
@@ -41,6 +41,7 @@ public:
 	void draw();
 
 	rzParticule( float x, float y , float z);
+	~rzParticule();
 
 	ofPoint * getMotion();
     

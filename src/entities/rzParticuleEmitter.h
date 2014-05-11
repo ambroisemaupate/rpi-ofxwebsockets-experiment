@@ -13,12 +13,17 @@ class ofApp;
 
 class rzParticuleEmitter : public ofPoint {
 
-	vector<rzParticule*> particules;
+	vector<rzParticule> particules;
     
     ofApp * mainApplication;
     
     string username;
     ofColor color;
+    bool initiated;
+    int birthtime;
+    
+    // write our boolean remove function
+    static bool shouldRemove(rzParticule &p);
 
 public:
     
