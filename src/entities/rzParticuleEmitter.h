@@ -37,5 +37,4 @@ public:
 
 	rzParticuleEmitter( float x, float y , float z , ofApp *mainApp );
     rzParticuleEmitter( float x, float y , float z , string username, ofApp *mainApp );
-	~rzParticuleEmitter();
 };

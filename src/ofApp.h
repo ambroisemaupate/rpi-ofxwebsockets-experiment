@@ -20,7 +20,7 @@ using namespace std;
 class ofApp : public ofBaseApp {
     
     ofxXmlSettings settings;
-    bool lockPoints = false;
+    bool lockPoints;
     
     static bool shouldRemove(rzParticuleEmitter &e);
     

@@ -28,7 +28,7 @@ void rzParticuleEmitter::draw() {
 	ofTranslate(this->x,this->y,this->z);
     
     if (this->particules.size() > 0){
-        for (auto iter = this->particules.begin(); iter != this->particules.end();iter++) {
+        for (vector<rzParticule>::iterator iter = this->particules.begin(); iter != this->particules.end();iter++) {
             (*iter).update();
             (*iter).draw();
         }
@@ -77,9 +77,6 @@ rzParticuleEmitter::rzParticuleEmitter( float x, float y , float z , string user
 	for (unsigned int i = 0; i < PARTICULE_CREATION_COUNT; i++) {
 		this->createParticule();
 	}
-}
-rzParticuleEmitter::~rzParticuleEmitter() {
-	
 }
 bool rzParticuleEmitter::shouldRemove(rzParticule &p){
     if(p.isDead() )return true;

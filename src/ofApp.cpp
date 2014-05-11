@@ -30,7 +30,7 @@ void ofApp::draw(){
 	ofFill();
 
     if (this->points.size() > 0) {
-        for (auto iter = this->points.begin(); iter != this->points.end(); ++iter) {
+        for (vector<rzParticuleEmitter>::iterator iter = this->points.begin(); iter != this->points.end(); ++iter) {
             (*iter).update();
             (*iter).draw();
         }

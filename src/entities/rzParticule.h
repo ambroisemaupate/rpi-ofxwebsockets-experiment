@@ -18,7 +18,7 @@ class rzParticule : public ofPoint {
     float size;
     int type;
 
-    int age = 0;
+    int age;
     int birthtime;
     
     static const int CIRCLE = 0;
@@ -41,7 +41,6 @@ public:
 	void draw();
 
 	rzParticule( float x, float y , float z);
-	~rzParticule();
 
 	ofPoint * getMotion();
     

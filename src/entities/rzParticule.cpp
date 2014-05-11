@@ -97,11 +97,6 @@ rzParticule::rzParticule( float x, float y , float z) : ofPoint(x, y, z){
     this->birthtime = ofGetElapsedTimeMillis();
 }
 
-rzParticule::~rzParticule(){
-    //if(this->motion != NULL) delete this->motion;
-    //if(this->color != NULL) delete this->color;
-}
-
 ofPoint * rzParticule::getMotion(){
     return &this->motion;
 }
