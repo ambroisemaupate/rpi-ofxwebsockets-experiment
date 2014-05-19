@@ -13,7 +13,7 @@ using namespace std;
 class rzParticule : public ofPoint {
 
 	ofPoint motion;
-    ofColor * color;
+    ofColor color;
 	float life;
     float size;
     int type;
@@ -44,7 +44,7 @@ public:
 
 	ofPoint * getMotion();
     
-    void setColor( ofColor * color );
+    void setColor( ofColor color );
 
 	bool isDead();
 };

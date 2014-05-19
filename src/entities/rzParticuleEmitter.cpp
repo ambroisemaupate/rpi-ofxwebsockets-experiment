@@ -27,17 +27,20 @@ void rzParticuleEmitter::draw() {
 	ofPushMatrix();
 	ofTranslate(this->x,this->y,this->z);
     
+    ofRemove(this->particules,rzParticuleEmitter::shouldRemove);
+    
     if (this->particules.size() > 0){
-        for (vector<rzParticule>::iterator iter = this->particules.begin(); iter != this->particules.end();iter++) {
-            (*iter).update();
-            (*iter).draw();
+        for (auto iter = this->particules.begin(); iter != this->particules.end(); ++iter) {
+        	//if (iter != NULL)
+        	//{
+	            (*iter).update();
+	            (*iter).draw();
+        	//}
         }
     }
     
-	//ofDrawBitmapString(this->username, 20, 20);
 	ofPopMatrix();
     
-    ofRemove(this->particules,rzParticuleEmitter::shouldRemove);
 }
 
 bool rzParticuleEmitter::isDead() {
@@ -48,10 +51,16 @@ void rzParticuleEmitter::createParticule() {
     
 	rzParticule p = rzParticule(0,0,0);
 	
-	if (this->username != "" &&
-        this->mainApplication->usersColor[this->username] != NULL ) {
-		p.setColor(this->mainApplication->usersColor[this->username]);
+	try {
+	    if (this->username != "" &&
+	        this->mainApplication->usersColor.find(this->username) != this->mainApplication->usersColor.end() ) {
+			p.setColor( this->mainApplication->usersColor.at(this->username) );
+		}
 	}
+	catch (const std::out_of_range& oor) {
+	    std::cerr << "Out of Range error: " << oor.what() << '\n';
+	}
+	
 	
 	this->particules.push_back(p);
 }

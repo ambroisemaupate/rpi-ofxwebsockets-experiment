@@ -28,14 +28,19 @@ void ofApp::draw(){
 	ofBackground(0,0,0);
 	ofSetColor(0,0,0);
 	ofFill();
+    
+    ofRemove(this->points,ofApp::shouldRemove);
 
     if (this->points.size() > 0) {
-        for (vector<rzParticuleEmitter>::iterator iter = this->points.begin(); iter != this->points.end(); ++iter) {
-            (*iter).update();
-            (*iter).draw();
+        for (auto iter = this->points.begin(); iter != this->points.end(); ++iter) {
+
+        	//if (iter != NULL)
+        	//{
+	            (*iter).update();
+	            (*iter).draw();
+        	//}
         }
     }
-    ofRemove(this->points,ofApp::shouldRemove);
 }
 
 //--------------------------------------------------------------
@@ -164,8 +169,8 @@ void ofApp::addPoint(string msg) {
         
         //cout << "Mapped point : " << newX << " : " << newY << "\n";
         
-        if (this->usersColor[u] == NULL) {
-            this->usersColor[u] = new ofColor((ofRandomf()*150)+100,(ofRandomf()*150)+100,(ofRandomf()*150)+100);
+        if (this->usersColor.find(u) == this->usersColor.end()) {
+            this->usersColor[u] = ofColor((ofRandomuf()*150)+100,(ofRandomuf()*150)+100,(ofRandomuf()*150)+100);
         }
         
         rzParticuleEmitter emitter = rzParticuleEmitter( newX, newY, 0.0, u, this );

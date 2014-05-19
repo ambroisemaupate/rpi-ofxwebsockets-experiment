@@ -27,7 +27,7 @@ class ofApp : public ofBaseApp {
 public:
     vector<string> messages;
     vector<rzParticuleEmitter> points;
-    map <string, ofColor*> usersColor;
+    map <string, ofColor> usersColor;
     ofxLibwebsockets::Client client;
 
 	void setup();
